@@ -21,6 +21,7 @@ resource "cloudflare_record" "buthow_www" {
   # Since only one domain exists exactly for the search, we can use the first result
   zone_id = data.cloudflare_zones.buthow.zones[0].id
   name    = "www"
-  value   = "buthow.dev"  type    = "CNAME"
+  value   = "buthow.dev"
+  type    = "CNAME"
   ttl     = 3600
 }
